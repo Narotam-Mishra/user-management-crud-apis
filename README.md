@@ -1,7 +1,8 @@
 ## [user-management-apis-backend](https://user-management-crud-apis-backend.onrender.com/)
 
 ### Setup
-```npm install && npm run dev```
+- To start and run the Server use this command ```npm install && npm run dev```
+- To test the app use this command  ```npm test```
 
 ### Database Connection
 1. Import connectDB.js from db
