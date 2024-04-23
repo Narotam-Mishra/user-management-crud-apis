@@ -1,4 +1,4 @@
-## [user-management-apis-backend](https://book-apis-backend-naru.onrender.com/)
+## [user-management-apis-backend]()
 
 ### Setup
 ```npm install && npm run dev```
@@ -16,11 +16,11 @@
 - [userSchema.js]
 
 ### CRUD APIs (Controllers)
-- [Register User](https://book-apis-backend-naru.onrender.com/api/v1/book)
-- [Get All Users](https://book-apis-backend-naru.onrender.com/api/v1/book)
-- [Get Single User](https://book-apis-backend-naru.onrender.com/api/v1/book/6606896e4b14922c2e1e443a)
-- [Update User](https://book-apis-backend-naru.onrender.com/api/v1/book/6606896e4b14922c2e1e443a)
-- [Delete User](https://book-apis-backend-naru.onrender.com/api/v1/book/6606896e4b14922c2e1e443a)
+- [Register User]()
+- [Get All Users]()
+- [Get Single User]()
+- [Update User]()
+- [Delete User]()
 
 ### Tested all Book APIs using Postman
 - [Postman Collection Link]()
