@@ -14,6 +14,9 @@ server.use(express.json());
 // cors setup :- Allow all origins with Default of cors(*)
 server.use(cors());
 
+// to server static html file
+server.use(express.static('./public'));
+
 // home route
 server.get('/', (req,res) => {
     res.send('Welcome to User Management CRUD App');
