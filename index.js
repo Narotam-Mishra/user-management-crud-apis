@@ -35,8 +35,9 @@ const startService = async () => {
     try {
         await dbConnect(process.env.mongoUrl)
         .then(() => console.log('DB Connected'))
-        const httpServer = server.listen(portNo, () => {
-            console.log(`Server running on port: ${portNo}...`);
+        const httpServer = server.listen(0, () => {
+            const actualPort = httpServer.address().port;
+            console.log(`Server running on port: ${actualPort}...`);
         })
 
         // Return the HTTP server instance for closing later

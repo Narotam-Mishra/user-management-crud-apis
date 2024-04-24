@@ -9,7 +9,7 @@ describe('User Management APIs', () => {
 
   beforeAll(async () => {
     // Start the server before tests
-    httpServer = await startService(6189);
+    httpServer = await startService();
   });
 
   // Add afterAll hook to close the server after all tests are done
