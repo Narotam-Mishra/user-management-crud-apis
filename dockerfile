@@ -13,7 +13,8 @@ RUN npm install
 COPY . .
 
 # Set default environment variables
-
+ENV PORT=7272
+ENV mongoUrl=
 
 # Expose port
 EXPOSE 6973

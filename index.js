@@ -28,14 +28,15 @@ server.use('/api/v1/user', userRoute);
 // Middleware setup for invalid route
 server.use(notFound);
 
-const portNo = process.env.PORT || 7272
+// Set the port based on the environment
+const portNo = process.env.NODE_ENV === 'production' ? process.env.PORT : 0;
 
 // start DB
 const startService = async () => {
     try {
         await dbConnect(process.env.mongoUrl)
         .then(() => console.log('DB Connected'))
-        const httpServer = server.listen(0, () => {
+        const httpServer = server.listen(portNo, () => {
             const actualPort = httpServer.address().port;
             console.log(`Server running on port: ${actualPort}...`);
         })
