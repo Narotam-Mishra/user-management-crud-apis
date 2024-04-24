@@ -14,7 +14,8 @@ COPY . .
 
 # Set default environment variables
 ENV PORT=7272
-ENV mongoUrl=
+ENV mongoUrl=mongodb://localhost:27017/mydb.user-management-apis
+
 
 # Expose port
 EXPOSE 6973
