@@ -39,6 +39,8 @@
 ### Dockerize the Application
 - Dockerized Node.js application by creating a Dockerfile that specifies the Docker image configuration. Build the Docker image and test it locally to ensure that your application runs correctly within a Docker container.
 
+- Note - I have used local environment URL (mongodb://localhost:27017/mydb.user-management-apis) for MongoDB in dockerfile
+
 ### CI/CD Pipelines
 - Set up CI/CD pipelines using a CI/CD service like GitHub Actions. Configure CI/CD pipeline to automatically run tests on each code push and deploy the application to a staging or production environment.
 
