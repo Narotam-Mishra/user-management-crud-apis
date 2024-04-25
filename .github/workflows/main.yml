@@ -13,10 +13,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # Additional step after Checkout code
+    - name: Additional step after Checkout
+      run: echo "This runs after Checkout code step"
+
     - name: Install Node.js and dependencies
       uses: actions/setup-node@v2
       with:
         node-version: '20'
+
+    # Additional step after Install Node.js and dependencies
+    - name: Additional step after Install Node.js and dependencies
+      run: echo "This runs after Install Node.js and dependencies step"
 
     - name: Install dependencies
       run: npm install
