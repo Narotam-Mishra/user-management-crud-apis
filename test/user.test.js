@@ -1,6 +1,6 @@
 // Import necessary modules
 const request = require('supertest');
-const { server, startService } = require('../index');
+const { server, startService, closeService } = require('../index');
 const User = require('../models/userSchema'); 
 
 describe('User Management APIs', () => {
@@ -15,9 +15,7 @@ describe('User Management APIs', () => {
   // Add afterAll hook to close the server after all tests are done
   afterAll(async () => {
     // Close the server after tests
-    console.log('Closing the server...');
-    await httpServer.close();
-    console.log('Server closed.');
+    await closeService();
   });
 
   beforeEach(async () => {

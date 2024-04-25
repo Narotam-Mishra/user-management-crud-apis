@@ -31,12 +31,14 @@ server.use(notFound);
 // Set the port based on the environment
 const portNo = process.env.NODE_ENV === 'production' ? process.env.PORT : 0;
 
+let httpServer; // Declare a variable to store the HTTP server instance
+
 // start backend service
 const startService = async () => {
     try {
         await dbConnect(process.env.mongoUrl)
         .then(() => console.log('DB Connected'))
-        const httpServer = server.listen(portNo, () => {
+        httpServer = server.listen(portNo, () => {
             const actualPort = httpServer.address().port;
             console.log(`Server running on port: ${actualPort}...`);
         })
@@ -48,8 +50,19 @@ const startService = async () => {
     }
 }
 
+const closeService = async () => {
+    try {
+        if (httpServer) {
+            await httpServer.close();
+            console.log('Server closed.');
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 startService();
 
 
 // Export the server and the function to close it
-module.exports = { server, startService };
+module.exports = { server, startService, closeService };
