@@ -31,7 +31,7 @@ server.use(notFound);
 // Set the port based on the environment
 const portNo = process.env.NODE_ENV === 'production' ? process.env.PORT : 0;
 
-// start DB
+// start backend service
 const startService = async () => {
     try {
         await dbConnect(process.env.mongoUrl)
