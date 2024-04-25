@@ -24,5 +24,7 @@ jobs:
     - name: Set up environment variables
       run: echo "mongoUrl=${{ secrets.MONGOURL }}" >> $GITHUB_ENV
 
-    - name: Run tests
-      run: npm test
+    - name: Run tests with Jest
+      run: |
+        npm test
+        jest --detectOpenHandles
