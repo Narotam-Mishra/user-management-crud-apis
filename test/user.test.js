@@ -13,9 +13,11 @@ describe('User Management APIs', () => {
   });
 
   // Add afterAll hook to close the server after all tests are done
-  afterAll(() => {
+  afterAll(async () => {
     // Close the server after tests
-    httpServer.close();
+    console.log('Closing the server...');
+    await httpServer.close();
+    console.log('Server closed.');
   });
 
   beforeEach(async () => {
