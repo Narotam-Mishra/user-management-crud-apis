@@ -33,7 +33,7 @@
 ### Written Test Cases
 - Used a testing framework Jest to write test cases for API endpoints. Written tests to ensure that each endpoint behaves as expected and handled various scenarios (e.g., success cases, error cases, validation).
 
-### Tested all Book APIs using Postman
+### Tested all User APIs using Postman
 - [Postman Collection Link](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
 
 ### Dockerize the Application
