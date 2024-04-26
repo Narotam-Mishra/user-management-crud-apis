@@ -16,6 +16,7 @@ describe('User Management APIs', () => {
   afterAll(async () => {
     // Close the server after tests
     await closeService();
+    process.exit(0);
   });
 
   beforeEach(async () => {
