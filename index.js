@@ -64,5 +64,6 @@ const closeService = async () => {
 startService();
 
 
+
 // Export the server and the function to close it
 module.exports = { server, startService, closeService };
